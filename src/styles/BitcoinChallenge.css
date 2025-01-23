@@ -1,0 +1,194 @@
+/* src/styles/BitcoinChallenge.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; /* שינוי לגופן מודרני יותר */
+  }
+  
+  .bitcoin-challenge-container {
+    background: var(--background-gradient);
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 3rem; /* הגדלת גודל כותרת */
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif; /* גופן חדש */
+  }
+  
+  .slot-machine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    gap: 25px; /* הגדלת המרווח בין כרטיסים */
+  }
+  
+  .slot-item {
+    width: 220px; /* הגדלת רוחב הכרטיס */
+    height: 100px; /* הגדלת גובה הכרטיס */
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem; /* הגדלת גודל טקסט */
+    transition: transform 0.3s, background 0.3s, border 0.3s;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  
+  .slot-item.active {
+    transform: scale(1.2);
+    background: #ffe9d6;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  }
+  
+  .buttons-container {
+    margin: 15px 0;
+    display: flex;
+    gap: 15px;
+  }
+  
+  button {
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    background: #e06600;
+    transform: translateY(-2px);
+  }
+  
+  button:disabled {
+    background: #bbb;
+    cursor: not-allowed;
+  }
+  
+  .selected-challenge,
+  .selected-prize {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 12px;
+    width: 85%;
+    max-width: 650px;
+    margin: 25px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .selected-challenge h2,
+  .selected-prize h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .selected-challenge p,
+  .selected-prize p {
+    font-size: 1.3rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .timer-container {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px #666;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .display-time {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .time-options {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .option-label {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  .time-button {
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .time-button:hover {
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .time-button.active {
+    background: var(--primary-color);
+    color: #fff;
+  }
+  
+  .timer-controls {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .control-button {
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .control-button:hover {
+    background: #e06600;
+    transform: translateY(-2px);
+  }
+  
+  .control-button:disabled {
+    background: #bbb;
+    cursor: not-allowed;
+  }
+  

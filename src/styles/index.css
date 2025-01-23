@@ -1,0 +1,224 @@
+/* Global root styles: brighter, more playful color scheme */
+:root {
+  --primary-color: #ff7b00; /* Vivid orange for highlights */
+  --secondary-color: #ffafbd; /* Pinkish tone */
+  --tertiary-color: #ffc3a0; /* Light peach tone */
+  --text-color: #333;        /* Dark text for contrast */
+  --background-gradient: linear-gradient(to right, #ffafbd, #ffc3a0);
+  --navbar-height: 60px;
+  --navbar-padding: 20px;
+  --footer-height: 60px;
+  
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Body styles */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--background-gradient);
+  color: var(--text-color);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* App container */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Navigation bar styles */
+.navbar {
+  background-color: var(--primary-color); /* Bright navbar */
+  color: #fff;
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .container {
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 var(--navbar-padding);
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Burger menu icon */
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 30px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.burger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+/* Sliding menu (mobile navigation) */
+.menu {
+  position: fixed; 
+  top: 0;
+  right: -250px; 
+  width: 250px;
+  height: 100vh;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: var(--navbar-height);
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.15);
+  transition: right 0.3s ease-in-out;
+}
+
+.menu-open {
+  right: 0; 
+}
+
+.menu-item {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--primary-color); 
+  color: #fff;
+  text-align: center;
+  height: var(--footer-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
+  margin-top: auto;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px #888;
+  text-align: center;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* Paragraph styles */
+p {
+  color: var(--text-color);
+  text-align: center;
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Main content container if needed */
+main .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  background: #fff8f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Generic button styles */
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #fff;
+  color: var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--tertiary-color);
+  transform: translateY(-2px);
+}
+
+/* Inputs */
+input {
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  color: var(--text-color);
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+/* If you have form or auth components, style them similarly */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
