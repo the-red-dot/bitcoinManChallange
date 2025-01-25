@@ -37,8 +37,8 @@ const Auth = () => {
 
   return (
     <div className="auth-container">
-      <h1>Welcome to האתגר של איש הביטקוין</h1>
-      <p>Track your health and progress with ease.</p>
+      <h1>האתגר של איש הביטקוין</h1>
+      <p></p>
       {message && <p className="auth-message">{message}</p>} {/* Display message */}
       <form className="auth-form" onSubmit={(e) => e.preventDefault()}>
         <input
@@ -55,10 +55,10 @@ const Auth = () => {
         />
         <div className="auth-buttons">
           <button type="button" onClick={handleSignup}>
-            Sign Up
+            הרשמה
           </button>
           <button type="button" onClick={handleLogin}>
-            Log In
+            כניסה
           </button>
         </div>
       </form>
