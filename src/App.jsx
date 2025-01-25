@@ -1,4 +1,3 @@
-// App.jsx
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -6,6 +5,7 @@ import Footer from './components/Footer';
 import Auth from './components/Auth';
 import BitcoinChallenge from './pages/BitcoinChallenge';
 
+// Context for authentication
 export const AuthContext = React.createContext();
 
 function App() {
@@ -18,14 +18,17 @@ function App() {
           <Navbar />
           <main className="main-content">
             <Routes>
-              {/* 
-                Example: If you just want your homepage to be the 
-                challenge page, set path="/" to BitcoinChallenge 
-              */}
+              {/* Home page route */}
               <Route path="/" element={<BitcoinChallenge />} />
 
-              {/* If you still want Auth page: */}
+              {/* Specific path for BitcoinManChallange */}
+              <Route path="/bitcoinManChallange" element={<BitcoinChallenge />} />
+
+              {/* Authentication page */}
               <Route path="/auth" element={<Auth />} />
+
+              {/* Catch-all route for unmatched paths */}
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />
@@ -34,5 +37,13 @@ function App() {
     </AuthContext.Provider>
   );
 }
+
+// NotFound component for unmatched routes
+const NotFound = () => (
+  <div style={{ textAlign: 'center', padding: '50px' }}>
+    <h1>404</h1>
+    <p>העמוד שביקשת לא נמצא.</p>
+  </div>
+);
 
 export default App;

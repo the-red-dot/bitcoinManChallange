@@ -192,3 +192,30 @@
     cursor: not-allowed;
   }
   
+  /* Challenge description container */
+.challenge-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Copy button styling */
+.copy-button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.copy-button:hover {
+  color: #e06600;
+  transform: scale(1.1);
+}
+
+.copy-button:focus {
+  outline: none;
+  transform: scale(1.2);
+}
